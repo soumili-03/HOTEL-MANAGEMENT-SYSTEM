@@ -1,31 +1,32 @@
+#include <fstream> //allows working with files, including reading from and writing to them
+#include <iomanip> // provides tools for formatting input and output in a specified manner
 #include <iostream>
-#include <string>
-#include <vector>
-#include <fstream>
-#include <iomanip>
-#include <map>
+#include <map>    //allow you to store key-value pairs and quickly look up values by their associated keys
+                  // here we made a map wherein it takes a pair of value as the key(floor and room
+                  // no.) which is mapped to the room status(value)
+#include <string> //provides functionality for working with strings
+#include <vector> //working with dynamic arrays or lists
 
 using namespace std;
-const int monthDays[12] = {31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365};
-class Room
+class Room // Base class representing a room
 {
-protected:
-    int floor_no;
-    int room_no;
-    string status;
-    vector<string> occupants;
+protected:                    // can be accessed by derived classes
+    int floor_no;             // to store floor no. of the room user wants to book
+    int room_no;              // to store the room no.
+    string status;            // either booked or vacant
+    vector<string> occupants; // stores all the occupants during distinct check-in
     int checkin_day;
     int checkin_month;
     int checkin_year;
     int checkout_day;
     int checkout_month;
     int checkout_year;
-    int total_bill;
-    friend class Hotel;
-
+    int total_bill;     // calculates total bill for all rooms
+    friend class Hotel; // allowing the Hotel class to access
+                        // and modify the protected members of the Room class.
 public:
     Room(int floor_no, int room_no, string status, vector<string> occupants, int checkin_day, int checkin_month, int checkin_year, int checkout_day, int checkout_month, int checkout_year, int total_bill)
-    {
+    { // parameterised constructor
         this->floor_no = floor_no;
         this->room_no = room_no;
         this->status = status;
@@ -36,35 +37,62 @@ public:
         this->checkout_day = checkout_day;
         this->checkout_month = checkout_month;
         this->checkout_year = checkout_year;
-        this->total_bill = total_bill;
+        this->total_bill = total_bill; // this keyword is used to refer the current instance of the class
     }
 
-    static int countLeapYearDays(int d[])
+    static bool isLeapYear(int year) // to check whether a year is leap or not
     {
-        int years = d[2];
-        if (d[1] <= 2)
-            years--;
-        return ((years / 4) - (years / 100) + (years / 400));
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-
+    // Static member functions belong to the class itself rather than a specific instance of the class.
     static int calculateNumberOfDays(int checkin_day, int checkin_month, int checkin_year, int checkout_day, int checkout_month, int checkout_year)
     {
-        int date1[3] = {checkin_day, checkin_month, checkin_year};
-        int date2[3] = {checkout_day, checkout_month, checkout_year};
+        // Define the days in each month
+        int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-        long int dayCount1 = (date1[2] * 365);
-        dayCount1 += monthDays[date1[1] - 1] + date1[0];
-        dayCount1 += countLeapYearDays(date1);
-        long int dayCount2 = (date2[2] * 365);
-        dayCount2 += monthDays[date2[1] - 1] + date2[0];
-        dayCount2 += countLeapYearDays(date2);
+        if (isLeapYear(checkin_year))
+        {
+            daysInMonth[1] = 29; // if its a leap year, changes no. of days in feb to 29
+        }
 
-        return abs(dayCount2 - dayCount1);
+        // Calculate the number of days in each date
+        int dayCount1 = checkin_day;
+        int dayCount2 = checkout_day;
+
+        // Add days for each month in the checkin and checkout dates
+        for (int month = 1; month < checkin_month; month++)
+        {
+            dayCount1 += daysInMonth[month - 1];
+        }
+
+        for (int month = 1; month < checkout_month; month++)
+        {
+            dayCount2 += daysInMonth[month - 1];
+        }
+
+        // Add days for each year in the checkin and checkout dates
+        dayCount1 += (checkin_year - 1) * 365 + (checkin_year - 1) / 4 - (checkin_year - 1) / 100 + (checkin_year - 1) / 400;
+        dayCount2 += (checkout_year - 1) * 365 + (checkout_year - 1) / 4 - (checkout_year - 1) / 100 + (checkout_year - 1) / 400;
+
+        // Calculate the total days difference
+        int totalDays = dayCount2 - dayCount1;
+
+        return totalDays;
     }
 
     int getFloorNo()
     {
-        return floor_no;
+        return floor_no; // This is a getter method that allows you to
+                         //  retrieve the floor_no attribute of a Room
+                         // object. It follows the encapsulation principle by
+                         // providing controlled access to the protected member variable.
     }
 
     int getRoomNo()
@@ -156,15 +184,16 @@ public:
         this->total_bill = total_bill;
     }
 
-    virtual void calculateTotalBill() {}
+    virtual void calculateTotalBill() {} // virtual function(polymorphism)-->late binding/dynamic dispatch
+    // It can be overridden by derived classes to provide specific implementations.
 };
 
-class ClassicRoom : public Room
+class ClassicRoom : public Room // single inheritance
 {
 public:
     ClassicRoom(int floor_no, int room_no, string status, vector<string> occupants, int checkin_day, int checkin_month, int checkin_year, int checkout_day, int checkout_month, int checkout_year, int total_bill) : Room(floor_no, room_no, status, occupants, checkin_day, checkin_month, checkin_year, checkout_day, checkout_month, checkout_year, total_bill) {}
-
-    void calculateTotalBill() override
+    // parameterised constructor-->calls constructor of Room class-->constructor chaining-->to initialise properties of a room
+    void calculateTotalBill() override // virtual base class is over ridden
     {
         total_bill = 2000 * calculateNumberOfDays(checkin_day, checkin_month, checkin_year, checkout_day, checkout_month, checkout_year);
     }
@@ -195,19 +224,19 @@ public:
 class Hotel
 {
 private:
-    map<pair<int, int>, Room *> rooms;
-
+    map<pair<int, int>, Room *> rooms; // map data structure
+    // Hotel class contains a private data member named rooms, which is a map that
+    //  associates pairs of floor numbers and room numbers (a unique identifier)
+    //  with pointers to Room objects
 public:
-    // const int monthDays[12] = {31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365};
-
     void addRoom(Room *room, int floor_no, int room_no)
     {
-        rooms[{floor_no, room_no}] = room;
+        rooms[{floor_no, room_no}] = room; // adds a room to the map database
     }
 
     Room *getRoomByFloorAndRoomNo(int floor_no, int room_no)
     {
-        auto roomIt = rooms.find({floor_no, room_no});
+        auto roomIt = rooms.find({floor_no, room_no}); // iterator->roomIt traversing the map using key pairs
         if (roomIt != rooms.end() && roomIt->second->getStatus() == "Vacant")
         {
             return roomIt->second;
@@ -216,16 +245,20 @@ public:
     }
 
     void bookRoom(Room *room, vector<string> occupants, int checkin_day, int checkin_month, int checkin_year, int checkout_day, int checkout_month, int checkout_year)
-    {
+    { // Room *room--> a pointer to a Room object
+      //  Set the status of the room to "Booked"
         room->setStatus("Booked");
+        // Set the occupants of the room
         room->setOccupants(occupants);
+        // Set the check-in date for the room
         room->setCheckinDate(checkin_day, checkin_month, checkin_year);
+        // Set the check-out date for the room
         room->setCheckoutDate(checkout_day, checkout_month, checkout_year);
-        int num_days = Room::calculateNumberOfDays(checkin_day, checkin_month, checkin_year, checkout_day, checkout_month, checkout_year);
+        // Calculate the total bill for the room (total bill calculation specific to each room type)
         room->calculateTotalBill();
     }
 
-    void calculateTotalBillForHotel()
+    void calculateTotalBillForHotel()//It calculates the total bill for all rooms in the hotel.
     {
         int total_bill = 0;
         for (const auto &roomPair : rooms)
@@ -234,6 +267,7 @@ public:
         }
         cout << "Total bill for the hotel: " << total_bill << endl;
     }
+
     void printRoomDetails()
     {
         int prevFloor = -1; // To keep track of the previous floor
@@ -255,13 +289,13 @@ public:
             const vector<string> &occupants = room->getOccupants();
             for (int i = 0; i < 4; i++)
             {
-                if (i < occupants.size())
+                if (i < occupants.size()) // since a room can accomodate at most 4 members
                 {
                     cout << setw(15) << occupants[i];
                 }
                 else
                 {
-                    cout << setw(15) << ""; // Empty column
+                    cout << setw(15) << ""; // Empty column when the size of occupants array is more than 5
                 }
             }
             cout << room->getCheckinDay() << "/" << room->getCheckinMonth() << "/" << setw(10) << room->getCheckinYear();
@@ -272,8 +306,8 @@ public:
 
     void initializeCSVFile(const string &filename)
     {
-        ofstream outfile(filename);
-
+        ofstream outfile(filename);//ofstream is used to create and open the specified file
+        //outfile variable, which allows writing data to the file
         // Write the header to the CSV file
         outfile << left << setw(11) << "Floor No." << setw(11) << "Room No." << setw(10) << "Status" << setw(15) << "Occupant 1" << setw(15) << "Occupant 2" << setw(15) << "Occupant 3" << setw(15) << "Occupant 4" << setw(10) << "Checkin" << setw(10) << "Checkout" << setw(10) << "Total Bill" << endl;
 
@@ -438,7 +472,7 @@ int main()
             minRooms = (numMembers + 3) / 4; // Ceiling division
             cout << "You'll need at least " << minRooms << " room(s) to accommodate all members." << endl;
 
-            while (numMembers > 0) //loops that runs till all the members are appointed a room
+            while (numMembers > 0) // loops that runs till all the members are appointed a room
             {
                 cout << "\nRoom Types:\n1. Classic Room\n2. Deluxe Room\n3. Suite Room\n";
                 int roomTypeChoice;
