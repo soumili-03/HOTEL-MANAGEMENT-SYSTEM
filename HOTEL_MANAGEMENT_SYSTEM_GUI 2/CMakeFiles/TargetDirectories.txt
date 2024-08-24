@@ -1,0 +1,9 @@
+/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI/CMakeFiles/HOTEL_MANAGEMENT_SYSTEM_GUI.dir
+/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI/CMakeFiles/edit_cache.dir
+/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI/CMakeFiles/rebuild_cache.dir
+/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI/CMakeFiles/list_install_components.dir
+/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI/CMakeFiles/install.dir
+/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI/CMakeFiles/install/local.dir
+/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI/CMakeFiles/install/strip.dir
+/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI/CMakeFiles/HOTEL_MANAGEMENT_SYSTEM_GUI_autogen_timestamp_deps.dir
+/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI/CMakeFiles/HOTEL_MANAGEMENT_SYSTEM_GUI_autogen.dir

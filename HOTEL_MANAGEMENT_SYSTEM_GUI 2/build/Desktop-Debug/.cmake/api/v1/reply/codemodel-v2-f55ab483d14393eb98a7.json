@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-ce356bc346a866dc8ae7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "HOTEL_MANAGEMENT_SYSTEM_GUI",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "HOTEL_MANAGEMENT_SYSTEM_GUI::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HOTEL_MANAGEMENT_SYSTEM_GUI-Debug-2ec8f83d07644dab905f.json",
+					"name" : "HOTEL_MANAGEMENT_SYSTEM_GUI",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HOTEL_MANAGEMENT_SYSTEM_GUI_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HOTEL_MANAGEMENT_SYSTEM_GUI_autogen-Debug-7226635248cdb8c43433.json",
+					"name" : "HOTEL_MANAGEMENT_SYSTEM_GUI_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HOTEL_MANAGEMENT_SYSTEM_GUI_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HOTEL_MANAGEMENT_SYSTEM_GUI_autogen_timestamp_deps-Debug-fbd74b928fc802de3bc0.json",
+					"name" : "HOTEL_MANAGEMENT_SYSTEM_GUI_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI/build/Desktop-Debug",
+		"source" : "/Users/shruti/Desktop/HOTEL-MANAGEMENT-SYSTEM-main/HOTEL_MANAGEMENT_SYSTEM_GUI"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
