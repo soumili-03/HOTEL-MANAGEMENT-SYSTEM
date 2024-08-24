@@ -1,5 +1,7 @@
 #include "roominfodialog.h"
 #include "ui_roominfodialog.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 RoomInfoDialog::RoomInfoDialog(QWidget *parent) :
     QDialog(parent),
@@ -26,5 +28,5 @@ void RoomInfoDialog::setRoomInfo(const QString &info)
 
 void RoomInfoDialog::on_close_clicked()
 {
-    accept();
+    this->accept();
 }

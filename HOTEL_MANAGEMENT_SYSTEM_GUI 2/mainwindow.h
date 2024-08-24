@@ -42,4 +42,6 @@ private:
     void openRoomInfoDialog(const QString &name, const QString &info);
 };
 
+
+
 #endif // MAINWINDOW_H

@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Qt\Tools\CMake_64\bin\cmake.exe --regenerate-during-build -SD:\coding\HOTEL_MANAGEMENT_SYSTEM_GUI -BD:\coding\HOTEL_MANAGEMENT_SYSTEM_GUI\build\Desktop_Qt_6_7_2_MinGW_64_bit-Debug
+  command = C:\Qt\Tools\CMake_64\bin\cmake.exe --regenerate-during-build -S"D:\coding\PROJECTS\HOTEL-MANAGEMENT-SYSTEM-GITHUB\HOTEL_MANAGEMENT_SYSTEM_GUI 2" -B"D:\coding\PROJECTS\HOTEL-MANAGEMENT-SYSTEM-GITHUB\HOTEL_MANAGEMENT_SYSTEM_GUI 2\build\Desktop_Qt_6_7_2_MinGW_64_bit-Debug"
   description = Re-running CMake...
   generator = 1
 
