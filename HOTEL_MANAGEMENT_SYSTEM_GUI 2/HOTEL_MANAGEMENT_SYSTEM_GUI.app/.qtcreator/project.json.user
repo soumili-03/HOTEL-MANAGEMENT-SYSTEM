@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 14.0.1, 2024-08-24T18:07:17. -->
+<!-- Written by QtCreator 14.0.1, 2024-08-24T21:31:32. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -121,6 +121,7 @@
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
     <value type="QString" key="PerfRecordArgsId">-e cpu-cycles --call-graph dwarf,4096 -F 250</value>
+    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">/Users/shruti/Desktop/proj/HOTEL-MANAGEMENT-SYSTEM/HOTEL_MANAGEMENT_SYSTEM_GUI 2/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HOTEL_MANAGEMENT_SYSTEM_GUI.exe</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>

@@ -35,6 +35,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         revenuewindow.h revenuewindow.cpp revenuewindow.ui
         roominfodialog.h roominfodialog.cpp roominfodialog.ui
         bookroom.h bookroom.cpp bookroom.ui
+        images/icons8-bungalow-60.png images/icons8-door-40-2.png images/icons8-door-40.png images/icons8-old-door-48.png images/icons8-parking-and-penthouse-48.png images/icons8-suite-64-2.png
     )
 else()
     if(ANDROID)
