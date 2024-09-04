@@ -1,5 +1,5 @@
-D:/coding/HOTEL_MANAGEMENT_SYSTEM_GUI/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HOTEL_MANAGEMENT_SYSTEM_GUI_autogen/EWIEGA46WW/moc_revenuewindow.cpp: D:/coding/HOTEL_MANAGEMENT_SYSTEM_GUI/revenuewindow.h \
-  D:/coding/HOTEL_MANAGEMENT_SYSTEM_GUI/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HOTEL_MANAGEMENT_SYSTEM_GUI_autogen/moc_predefs.h \
+D:/coding/PROJECTS/HOTEL-MANAGEMENT-SYSTEM-GITHUB/HOTEL_MANAGEMENT_SYSTEM_GUI\ 2/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HOTEL_MANAGEMENT_SYSTEM_GUI_autogen/EWIEGA46WW/moc_revenuewindow.cpp: D:/coding/PROJECTS/HOTEL-MANAGEMENT-SYSTEM-GITHUB/HOTEL_MANAGEMENT_SYSTEM_GUI\ 2/revenuewindow.h \
+  D:/coding/PROJECTS/HOTEL-MANAGEMENT-SYSTEM-GITHUB/HOTEL_MANAGEMENT_SYSTEM_GUI\ 2/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HOTEL_MANAGEMENT_SYSTEM_GUI_autogen/moc_predefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h \

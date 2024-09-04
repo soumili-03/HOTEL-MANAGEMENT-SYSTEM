@@ -34,7 +34,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(320, 140, 241, 151));
+        label->setGeometry(QRect(100, 100, 591, 341));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(10, 10, 83, 29));
@@ -48,7 +48,7 @@ public:
     void retranslateUi(QMainWindow *RevenueWindow)
     {
         RevenueWindow->setWindowTitle(QCoreApplication::translate("RevenueWindow", "MainWindow", nullptr));
-        label->setText(QCoreApplication::translate("RevenueWindow", "REVENUE", nullptr));
+        label->setText(QCoreApplication::translate("RevenueWindow", "revenue", nullptr));
         pushButton->setText(QCoreApplication::translate("RevenueWindow", "BACK", nullptr));
     } // retranslateUi
 

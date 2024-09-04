@@ -1,5 +1,6 @@
-D:/coding/HOTEL_MANAGEMENT_SYSTEM_GUI/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HOTEL_MANAGEMENT_SYSTEM_GUI_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/coding/HOTEL_MANAGEMENT_SYSTEM_GUI/mainwindow.h \
-  D:/coding/HOTEL_MANAGEMENT_SYSTEM_GUI/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HOTEL_MANAGEMENT_SYSTEM_GUI_autogen/moc_predefs.h \
+D:/coding/PROJECTS/HOTEL-MANAGEMENT-SYSTEM-GITHUB/HOTEL_MANAGEMENT_SYSTEM_GUI\ 2/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HOTEL_MANAGEMENT_SYSTEM_GUI_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/coding/PROJECTS/HOTEL-MANAGEMENT-SYSTEM-GITHUB/HOTEL_MANAGEMENT_SYSTEM_GUI\ 2/mainwindow.h \
+  D:/coding/PROJECTS/HOTEL-MANAGEMENT-SYSTEM-GITHUB/HOTEL_MANAGEMENT_SYSTEM_GUI\ 2/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/HOTEL_MANAGEMENT_SYSTEM_GUI_autogen/moc_predefs.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QString \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h \
@@ -142,7 +143,9 @@ D:/coding/HOTEL_MANAGEMENT_SYSTEM_GUI/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QDialog \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMainWindow \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
@@ -349,4 +352,6 @@ D:/coding/HOTEL_MANAGEMENT_SYSTEM_GUI/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
-  D:/coding/HOTEL_MANAGEMENT_SYSTEM_GUI/revenuewindow.h
+  D:/coding/PROJECTS/HOTEL-MANAGEMENT-SYSTEM-GITHUB/HOTEL_MANAGEMENT_SYSTEM_GUI\ 2/bookroom.h \
+  D:/coding/PROJECTS/HOTEL-MANAGEMENT-SYSTEM-GITHUB/HOTEL_MANAGEMENT_SYSTEM_GUI\ 2/revenuewindow.h \
+  D:/coding/PROJECTS/HOTEL-MANAGEMENT-SYSTEM-GITHUB/HOTEL_MANAGEMENT_SYSTEM_GUI\ 2/roominfodialog.h
